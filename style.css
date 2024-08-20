@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Outfit";
+  font-display: swap;
+  font-weight: 100 900;
+  /* In this CSS code, the format("truetype") part specifies the font format for the font file referenced in the src attribute. */
+  src: url(assets/Outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+
+/* Colors */
+/* 
+
+Primary: overall look of the site, primary actios -  links, navigation, items, icons, accent border or text
+
+Neutrals: text, backgrounds and borders, secondary buttons and links 
+
+Supporting/ secondary: when you need an element to standn our or to reinforce things like error state 
+
+*/
+
+:root {
+  /* Primary Colors - text */
+  --clr-primary-soft-blue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl((178, 100%, 50%));
+
+  /* Neutrals - backgrounds */
+  --clr-neutral-dark-blue-main: hsl(217, 54%, 11%);
+
+  --clr-neutral-dark-blue-card: hsl(216, 50%, 16%);
+  --clr-neutral-dark-blue-line: hsl(215, 32%, 27%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  /* Font Family */
+  --font-family-default: "Outfit", sans-serif;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+
+  /* Font-Size */
+  font-size: 18px;
+
+  /* border-radius */
+  --border-radius: 1rem;
+}
+
+/* By default, the width and height of an element includes only the content area. Any padding, border, or margin is added to the overall size of the element. This can sometimes lead to unexpected layout issues. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-size: 1rem;
+  color: var(--clr-primary-soft-blue);
+  background: var(--clr-neutral-dark-blue-main);
+  --padding: 1rem;
+}
+
+/* 1 */
+/* Will center things in a larger screen size */
+@media (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+}
+
+/* 2 */
+/* setup section titles */
+.NFT-title {
+  font-weight: var(--fw-bold);
+  font-size: 1.3rem;
+  color: var(--clr-neutral-white);
+}
+
+/* 3 */
+.main-container {
+  padding: var(--padding);
+  max-width: 18rem;
+  display: grid;
+  background: var(--clr-neutral-dark-blue-card);
+  border-radius: var(--border-radius);
+  gap: 1rem;
+  /* width: 18rem; */
+}
+
+/* 4 */
+img {
+  width: 16rem;
+}
+
+/* 5 */
+.title-description p {
+  padding: var(--padding) 0 0 0;
+  line-height: 1.5;
+  font-weight: var(--fw-light);
+}
