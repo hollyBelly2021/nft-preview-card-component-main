@@ -20,7 +20,7 @@ Supporting/ secondary: when you need an element to standn our or to reinforce th
 :root {
   /* Primary Colors - text */
   --clr-primary-soft-blue: hsl(215, 51%, 70%);
-  --clr-primary-cyan: hsl((178, 100%, 50%));
+  --clr-primary-cyan: hsl(178, 100%, 50%);
 
   /* Neutrals - backgrounds */
   --clr-neutral-dark-blue-main: hsl(217, 54%, 11%);
@@ -38,6 +38,7 @@ Supporting/ secondary: when you need an element to standn our or to reinforce th
   --fw-bold: 600;
 
   /* Font-Size */
+  --font-size-100: 16px;
   font-size: 18px;
 
   /* border-radius */
@@ -89,6 +90,19 @@ body {
   color: var(--clr-neutral-white);
 }
 
+/* .NFT-title:hover {
+  color: var(--clr-primary-cyan);
+} */
+.link {
+  text-decoration: none;
+  color: var(--clr-neutral-white);
+  /* Other styles as needed */
+}
+
+.link:hover {
+  color: var(--clr-primary-cyan);
+}
+
 /* 3 */
 .main-container {
   padding: var(--padding);
@@ -101,7 +115,7 @@ body {
 }
 
 /* 4 */
-img {
+main-container img {
   width: 16rem;
 }
 
@@ -110,4 +124,44 @@ img {
   padding: var(--padding) 0 0 0;
   line-height: 1.5;
   font-weight: var(--fw-light);
+}
+
+/* 6 */
+.info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: var(--font-size-100);
+  font-weight: var(--fw-light);
+}
+
+.info[data-spacing="large"] {
+  justify-content: space-between;
+}
+
+.info h4 {
+  color: var(--clr-primary-cyan);
+  font-weight: var(--fw-bold);
+}
+
+/* 7 */
+hr {
+  border: 0.5px solid var(--clr-neutral-dark-blue-line);
+}
+
+.footer {
+  /* display: flex; */
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  font-weight: var(--fw-regular);
+}
+
+.footer img {
+  width: 1.6rem;
+  border: 1px solid var(--clr-neutral-white);
+  border-radius: 100vh;
+}
+
+.footer a {
+  color: var(--clr-neutral-white);
 }
