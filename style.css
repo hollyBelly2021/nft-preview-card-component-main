@@ -119,37 +119,40 @@ When the screen width is 375 pixels or smaller, the body element will have a mar
   color: var(--clr-primary-cyan);
 }
 
+/* 13 */
 .image-icon {
-  position: relative;
-}
-.image-icon svg {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  /* transform: translate(-50%, -50%); */
-
-  /* display: none; */
-}
-
-.image-box {
+  position: relative; //If necessary, remove this
   width: 16rem;
   height: 16rem;
   background: var(--clr-primary-cyan);
 }
 
-.image-box img {
-  /* important  */
-  position: relative;
+/* 14 */
+.image-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Higher than the image's z-index */
+}
+
+/* 15 */
+.image-icon img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  z-index: 100000; /* Lower than the SVG's z-index */
 }
 
-.link img:hover {
-  /* display: none; */
-  opacity: 0.34;
+/* 16 */
+.main-container .image-icon:hover img {
+  opacity: 0.2;
 }
 
-.image-icon svg:hover {
-  z-index: 1000;
+/* 17 */
+.main-container .image-icon:hover svg {
+  z-index: 100000000;
 }
 
 /* 3 */
